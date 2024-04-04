@@ -1,0 +1,4 @@
+docker run -d --name nginx -p 4050:80 -v ~/Documentos/projetos_github/DevOps/docker/html:/usr/share/nginx/html nginx
+
+
+docker run -d --name nginx -p 4050:80 --mount type=bind,source="$(pwd)"/html,target=/usr/share/nginx/html nginx
