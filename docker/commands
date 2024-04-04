@@ -2,3 +2,7 @@ docker run -d --name nginx -p 4050:80 -v ~/Documentos/projetos_github/DevOps/doc
 
 
 docker run -d --name nginx -p 4050:80 --mount type=bind,source="$(pwd)"/html,target=/usr/share/nginx/html nginx
+
+#diferença entre volume e bind
+# Volume: é um diretório gerenciado pelo Docker e seus arquivos são armazenados em um diretório específico do host.
+# Bind: é um diretório do host que é montado no container. O Docker não gerencia o diretório e os arquivos são armazenados no diretório do host.
